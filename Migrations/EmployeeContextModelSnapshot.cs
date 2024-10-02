@@ -40,11 +40,11 @@ namespace ComplexPropertyFromSql.Migrations
 
                             b1.Property<int>("Day")
                                 .HasColumnType("int")
-                                .HasColumnName("DayInYearDay");
+                                .HasColumnName("ReviewDayDay");
 
                             b1.Property<int>("Month")
                                 .HasColumnType("int")
-                                .HasColumnName("DayInYearMonth");
+                                .HasColumnName("ReviewDayMonth");
                         });
 
                     b.HasKey("Id");

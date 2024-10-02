@@ -17,8 +17,8 @@ namespace ComplexPropertyFromSql.Migrations
             Id = table.Column<int>(type: "int", nullable: false)
                   .Annotation("SqlServer:Identity", "1, 1"),
             Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
-            DayInYearDay = table.Column<int>(type: "int", nullable: false),
-            DayInYearMonth = table.Column<int>(type: "int", nullable: false)
+            ReviewDayDay = table.Column<int>(type: "int", nullable: false),
+            ReviewDayMonth = table.Column<int>(type: "int", nullable: false)
           },
           constraints: table =>
           {

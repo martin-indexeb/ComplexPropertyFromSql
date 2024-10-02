@@ -10,9 +10,7 @@ namespace ComplexPropertyFromSql.Data.ComplexTypes
   [ComplexType]
   public record DayInYear
   {
-    [Column("DayInYearDay")]
     public int Day { get; set; }
-    [Column("DayInYearMonth")]
     public int Month { get; set; }
   }
 }
