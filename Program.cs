@@ -8,9 +8,9 @@ try
 {
   var list1 = db.Employees.ToList();
   Console.WriteLine("Loaded employees by dbcontext");
-} catch
+} catch (Exception ex)
 {
-  Console.WriteLine("Failed to load employees by dbcontext");
+  Console.WriteLine($"Failed to load employees by dbcontext: {ex.Message}");
 }
 // load by sql
 try
@@ -21,7 +21,7 @@ try
 {
   Console.WriteLine($"Failed to load employees by sql: {ex.Message}");
 }
-
+// load by workaround
 try
 {
   var list2 = db.Employees.FromSql($"select Id, Name, ReviewDayDay as ReviewDay_Day, ReviewDayMonth as ReviewDay_Month from Employees").ToList();
