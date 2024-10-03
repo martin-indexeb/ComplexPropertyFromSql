@@ -25,8 +25,11 @@ namespace ComplexPropertyFromSql.Data
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-      //optionsBuilder.UseSqlServer("Server=localhost;Integrated Security=true;Initial Catalog=EmployeesDb;TrustServerCertificate=True");
       optionsBuilder.UseSqlite($@"Data Source=.\Employees.db");
+      
+      // You get the same issue with SQL Server
+      //optionsBuilder.UseSqlServer("Server=localhost;Integrated Security=true;Initial Catalog=EmployeesDb;TrustServerCertificate=True");
+
       base.OnConfiguring(optionsBuilder);
     }
   }

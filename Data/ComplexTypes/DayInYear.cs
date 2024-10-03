@@ -7,7 +7,6 @@ using System.Threading.Tasks;
 
 namespace ComplexPropertyFromSql.Data.ComplexTypes
 {
-  [ComplexType]
   public record DayInYear
   {
     public int Day { get; set; }
